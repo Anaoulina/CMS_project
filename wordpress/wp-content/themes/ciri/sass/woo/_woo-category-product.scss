@@ -1,0 +1,297 @@
+.lastudio-kit ul.products.lakit-products__list li{
+	padding-top: 0;
+	padding-bottom: 0;
+	list-style: none;
+}
+.woocommerce-loop-category__title{
+	mark{
+		background: none;
+		color: inherit;
+	}
+}
+.wc-page-content{
+	ul.products{
+		--theme-product-item-gap: 30px;
+		--theme-product-col: 3;
+		@media(max-width: 1280px){
+			--theme-product-col: 2;
+		}
+		@media(max-width: 767px){
+			--theme-product-col: 1;
+		}
+		.site-no-sidebar & {
+			--theme-product-col: 4;
+			@media(max-width: 1280px){
+				--theme-product-col: 3;
+			}
+			@media(max-width: 880px){
+				--theme-product-col: 2;
+			}
+			@media(max-width: 767px){
+				--theme-product-col: 1;
+			}
+		}
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: calc(var(--theme-product-item-gap) * -.5);
+		margin-left: calc(var(--theme-product-item-gap) * -.5);
+		list-style: none;
+		margin-bottom: 2em;
+		> li{
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--theme-product-item-gap) * .5);
+			padding-left: calc(var(--theme-product-item-gap) * .5);
+		}
+		> li{
+			flex: 1 0 calc(100%/var(--theme-product-col));
+			max-width: calc(100%/var(--theme-product-col));
+			margin-bottom: 40px;
+			position: relative;
+		}
+		a{
+			position: relative;
+			display: block;
+		}
+		img{
+			width: 100%;
+			margin-bottom: 20px;
+			transition: all .5s;
+		}
+		h2{
+			font-size: 18px;
+			margin-bottom: 8px;
+			font-weight: normal;
+			font-family: inherit;
+		}
+		.price{
+			font-size: 18px;
+			font-weight: 600;
+			color: #353535;
+		}
+		.added_to_cart,
+		.button{
+			position: absolute;
+			top: 66%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-weight: normal;
+			padding: 15px 20px;
+			opacity: 0;
+			visibility: hidden;
+			margin-top: -20px;
+			background-color: $secondary-color;
+			color: #fff;
+			font-size: 14px;
+			line-height: 1;
+			&:hover{
+				background-color: $primary-color;
+			}
+			.labtn-icon{
+				display: none;
+			}
+		}
+		.add_to_cart_button{
+			&.added{
+				display: none;
+			}
+		}
+		figure {
+			position: relative;
+		}
+		li:hover{
+			figure {
+				background: #f9f9f9;
+			}
+			img{
+				opacity: .8;
+			}
+			.added_to_cart,
+			.button{
+				opacity: 1;
+				margin-top: 0;
+				visibility: inherit;
+			}
+		}
+	}
+}
+
+.wc-view-toggle {
+	display: none;
+}
+
+
+/** Product V2 **/
+//
+//$zones: a, b, c;
+//.lakitp-zone{
+//	--lakit-zone-direction: column;
+//	--lakit-zone-width: auto;
+//	--lakit-zone-padding: 0;
+//	--lakit-zone-gap: 0;
+//	--lakit-zone-margin: 0;
+//	--lakit-zone-radius: 0;
+//	--lakit-zone-pos-transform: initial;
+//	--lakit-zone-bg: initial;
+//	--lakit-zone-color: initial;
+//	background-color: var(--lakit-zone-bg);
+//	color: var(--lakit-zone-color);
+//	transform: var(--lakit-zone-pos-transform);
+//	display: flex;
+//	flex-direction: var(--lakit-zone-direction);
+//	width: var(--lakit-zone-width);
+//	gap: var(--lakit-zone-gap);
+//	padding: var(--lakit-zone-padding);
+//	margin: var(--lakit-zone-margin);
+//	border-radius: var(--lakit-zone-radius);
+//	.product_item--thumbnail & {
+//		position: absolute;
+//	}
+//	@each $zone in $zones {
+//		&-#{$zone}{
+//			.actionzone-#{$zone}-pos-center-center & {
+//				--lakit-zone-pos-transform: translate(-50%,-50%);
+//				left: 50%;
+//				top: 50%;
+//			}
+//			.actionzone-#{$zone}-pos-center-left & {
+//				--lakit-zone-pos-transform: translateY(-50%);
+//				left: 0;
+//				top: 50%;
+//			}
+//			.actionzone-#{$zone}-pos-center-right & {
+//				--lakit-zone-pos-transform: translateY(-50%);
+//				right: 0;
+//				top: 50%;
+//			}
+//			.actionzone-#{$zone}-pos-top-center & {
+//				--lakit-zone-pos-transform: translateX(-50%);
+//				left: 50%;
+//				top: 0;
+//			}
+//			.actionzone-#{$zone}-pos-top-left & {
+//				left: 0;
+//				top: 0;
+//			}
+//			.actionzone-#{$zone}-pos-top-right & {
+//				right: 0;
+//				top: 0;
+//			}
+//			.actionzone-#{$zone}-pos-bottom-center & {
+//				--lakit-zone-pos-transform: translateX(-50%);
+//				left: 50%;
+//				bottom: 0;
+//			}
+//			.actionzone-#{$zone}-pos-bottom-left & {
+//				left: 0;
+//				bottom: 0;
+//			}
+//			.actionzone-#{$zone}-pos-bottom-right & {
+//				right: 0;
+//				bottom: 0;
+//			}
+//			.actionzone-#{$zone}-hover-yes &{
+//				opacity: 0;
+//				transition: all .3s;
+//			}
+//			.product_item--inner:hover & {
+//				.actionzone-#{$zone}-hover-yes & {
+//					opacity: 1;
+//				}
+//			}
+//		}
+//	}
+//	.lakit-btn{
+//		padding: 0;
+//		display: flex;
+//		align-items: center;
+//		&.only-icon{
+//			.lakit-btn--text{
+//				display: none;
+//			}
+//		}
+//	}
+//}
+//.lakitp-zone-item{
+//	--lakit-zone-item-width: auto;
+//	width: var(--lakit-zone-item-width);
+//}
+//.lakit-btn--icon{
+//	svg{
+//		display: block;
+//	}
+//}
+//.product_item--stock .stock_bar {
+//	display: flex;
+//	flex-direction: column;
+//}
+//.stock_bar--progress{
+//	display: flex;
+//	background: var(--lakit-border-color);
+//	height: 6px;
+//	overflow: hidden;
+//}
+//.stock_bar--progress-val {
+//	background: var(--lakit-primary-color);
+//}
+//.lakitp-zone-item--row {
+//	--lakit-zone-item-direction: initial;
+//	--lakit-zone-item-gap: initial;
+//	--lakit-zone-item-wrap: initial;
+//	--lakit-zone-item-justify-content: initial;
+//	display: flex;
+//	flex-direction: var(--lakit-zone-item-direction);
+//	flex-wrap: var(--lakit-zone-item-wrap);
+//	justify-content: var(--lakit-zone-item-justify-content);
+//	gap: var(--lakit-zone-item-gap);
+//}
+//
+//.zone-tag-only-item-yes{
+//	.product_item--tags {
+//		.zone-term-list{
+//			> *:not(:first-child){
+//				display: none;
+//			}
+//		}
+//	}
+//}
+//.zone-cat-only-item-yes{
+//	.product_item--category {
+//		.zone-term-list{
+//			> *:not(:first-child){
+//				display: none;
+//			}
+//		}
+//	}
+//}
+//.actionzone-a-toggle-yes{
+//	.lakitp-zone-a{
+//		.lakit-btn:not(.btn-toggle) {
+//			display: none;
+//		}
+//		&:hover {
+//			.lakit-btn {
+//				display: flex;
+//				&.btn-toggle {
+//					display: none;
+//				}
+//			}
+//		}
+//	}
+//}
+//.actionzone-b-toggle-yes{
+//	.lakitp-zone-b {
+//		.lakit-btn:not(.btn-toggle) {
+//			display: none;
+//		}
+//		&:hover {
+//			.lakit-btn {
+//				display: flex;
+//				&.btn-toggle {
+//					display: none;
+//				}
+//			}
+//		}
+//	}
+//}

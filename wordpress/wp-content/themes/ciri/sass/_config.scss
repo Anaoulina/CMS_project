@@ -1,0 +1,93 @@
+// Typography Variables
+// -------------------------------------------------//
+// Basic Typography
+$base-font-size:       16px;
+$base-line-height:     1.8;
+$font-size:            $base-font-size !default;
+$browser-font-size:    16px !default;
+
+// Body type
+$body-font-family:     var(--theme-body-font-family);
+$body-font-weight:     400 !default;
+$body-font-style:      normal !default;
+
+// Heading type
+$heading-font-family:  var(--theme-heading-font-family);
+$heading-font-weight:  var(--theme-heading-font-weight);
+$heading-font-style:   normal !default;
+
+$three-font-family:   var(--theme-three-font-family);
+$three-font-weight:   var(--theme-three-font-weight);
+
+// Color Variables
+// -------------------------------------------------
+
+// Project base color
+// ==================================
+$color-1:             #fff !default;
+$color-2:             #212121 !default;
+$color-3:             #1A1A1A !default;
+$color-4:             #212529 !default;
+$color-5:             #BC8157 !default;
+$color-6:             #BC8157 !default;
+$color-7:             #BCBCBC !default;
+$color-8:             #f8f8f8 !default;
+$color-9:             #f1f1f1 !default;
+$color-10:            #ddd !default;
+$color-11:            #555 !default;
+$color-12:            #1B1B1B !default;
+$color-13:            #bbb !default;
+$color-14:            #858585 !default;
+$color-15:            #5d5d5d !default;
+$color-16:            #f5f5f5 !default;
+$color-17:            #848484 !default;
+
+// ===================================
+
+// Base colors
+$body-bg-color:        var(--theme-body-bg-color);
+$border-color:         var(--theme-border-color);
+$selection-bg-color:   var(--theme-selection-bg-color);
+$selection-font-color: var(--theme-selection-font-color);
+$primary-color:        var(--theme-primary-color);
+$secondary-color:      var(--theme-secondary-color);
+// Typography colors
+$body-font-color:      var(--theme-body-font-color);
+$heading-font-color:   var(--theme-heading-font-color);
+$three-color:          var(--theme-three-color);
+
+// Link colors
+$link-color:           var(--theme-link-color);
+$link-hover-color:     var(--theme-link-hover-color);
+
+// Settings Hamburgers buttons
+// ==================================================
+$hamburger-layer-width                     : 20px !default;
+$hamburger-layer-height                    : 2px !default;
+$hamburger-layer-spacing                   : 5px !default;
+$hamburger-layer-color                     : #000 !default;
+$hamburger-layer-border-radius             : 3px !default;
+$hamburger-hover-opacity                   : 0.7 !default;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter    : opacity(50%) !default;
+
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+$screen-mb-min:     576px;
+$screen-sm-min:     992px;
+$screen-md-min:     1280px;
+$screen-lg-min:     1600px;
+$screen-xlg-min:    2000px;
+
+$screen-mb-max:              ($screen-mb-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xlg-min - 1) !default;

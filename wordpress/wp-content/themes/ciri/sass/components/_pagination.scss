@@ -1,0 +1,315 @@
+ul.page-numbers{
+  margin: 0 0 2em;
+  list-style: none;
+  .woocommerce-pagination & {
+    text-align: center;
+  }
+  li{
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .current{
+    color: $primary-color
+  }
+  .page-numbers {
+    min-width: 1.5em;
+    display: inherit;
+  }
+}
+.nav-links .page-numbers {
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+}
+.la-pagination {
+  padding: 0 2px;
+  text-align: center;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0.875em;
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+    }
+
+    .page-numbers {
+      text-align: center;
+      display: block;
+      position: relative;
+      padding: 8px 2px;
+      line-height: 20px;
+      min-width: 38px;
+      transition: all .3s;
+      color: $three-color;
+      border: 1px solid $border-color;
+      i{
+        vertical-align: middle;
+        margin-top: -2px;
+      }
+      &.current,
+      &:hover {
+        color: #fff;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+      &.dots {
+        border-color: transparent;
+        background: none;
+        padding: 0;
+        min-width: 0;
+        color: inherit;
+      }
+    }
+  }
+
+  .la-ajax-loading-outer,
+  .pagination_ajax_loadmore {
+    display: none;
+  }
+
+  &.active-loadmore {
+    &.nothingtoshow,
+    ul {
+      display: none;
+    }
+
+    .pagination_ajax_loadmore {
+      display: block;
+    }
+  }
+  &.nothingtoshow {
+    &.la-ajax-pagination {
+      display: none;
+    }
+  }
+  &.doing-ajax {
+    .la-ajax-loading-outer {
+      display: inline-block;
+    }
+
+    ul,
+    .pagination_ajax_loadmore {
+      display: none;
+    }
+  }
+}
+.ciri-is-blog{
+  .la-pagination {
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+  &.header-v-default{
+    .la-pagination {
+      margin-top: 0;
+    }
+  }
+}
+
+.elementor-post-navigation {
+  overflow: hidden;
+  @include display();
+  @include justify-content(space-between);
+  &__link{
+    min-height: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 33.3333%;
+    a{
+      @include display();
+      @include align-items(center);
+    }
+  }
+  &__all{
+    a{
+      @include justify-content(center);
+    }
+  }
+  &__next{
+    a{
+      @include justify-content(flex-end);
+    }
+  }
+  &__link__next,
+  &__link__prev{
+    overflow: hidden;
+    > span{
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+  }
+  .post-navigation{
+    &__arrow-all{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__arrow-prev{
+      padding-right: 10px
+    }
+    &__arrow-next{
+      padding-left: 10px
+    }
+    &__arrow-wrapper {
+      font-size: 20px;
+      i{
+        transform: none !important;
+      }
+    }
+    &__navigation__link{
+      a{
+        @include display();
+        @include align-items(center);
+        max-width: 100%
+      }
+    }
+  }
+
+  &.has-tooltip{
+    overflow: visible;
+    width: 150px;
+    margin-left: auto;
+    max-width: 100%;
+    .post-navigation__arrow-wrapper{
+      position: relative;
+      .elementor-screen-only{
+        top: auto;
+        bottom: 100%;
+        height: auto;
+        clip: auto;
+        background: #212121;
+        color: #fff;
+        font-size: 10px;
+        padding: 0px 5px;
+        line-height: 20px;
+        white-space: pre;
+        z-index: 9999;
+        position: absolute;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        transition: all .3s;
+        opacity: 0;
+        margin: 0 auto;
+        min-width: 60px;
+        overflow: inherit;
+        @include translateX(-50%);
+        &:after{
+          content: '';
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          border-top: 3px solid #212121;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -3px;
+        }
+      }
+    }
+    .elementor-post-navigation__link{
+      overflow: visible;
+      &:hover {
+        .post-navigation__arrow-wrapper{
+          .elementor-screen-only{
+            opacity: 1;
+
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.la-pagination.active-loadmore {
+  text-align: center;
+}
+
+.pagination_ajax_loadmore a {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid $border-color;
+  position: relative;
+  display: inline-block;
+  &:hover{
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+  }
+}
+
+.woocommerce-pagination.wc-toolbar .products__loadmore_ajax {
+  float: left;
+}
+.woocommerce-pagination.wc-toolbar .products__loadmore_ajax a {
+  display: inline-block;
+}
+
+@media(max-width: 767px){
+  .la-pagination ul .page-numbers {
+    min-width: 30px;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+
+.la-pagination.la-ajax-load-first {
+  margin: 0;
+  padding: 0;
+  min-height: 100px;
+  text-align: center;
+}
+.la-pagination.la-ajax-load-first .la-ajax-loading-outer {
+  display: inline-block;
+}
+
+.la-pagination.la-ajax-load-first ul {
+  display: none;
+}
+.post-navigation__arrow-menu i {
+  font-family: 'LaStudioIcons';
+}
+.post-navigation__arrow-menu i:before {
+  content: '\ea0c';
+}
+
+.lastudio-kit .lakit-pagination ul{
+  li{
+    margin: 0;
+  }
+  .page-numbers{
+    border-radius: 0;
+  }
+}
+
+.elementor-lakit-post-navigation.style2{
+  .post-navigation__next--title,
+  .post-navigation__prev--title{
+    margin: 6px 0 20px;
+  }
+  .elementor-post-navigation__link__next,
+  .elementor-post-navigation__link__prev{
+    width: 200px;
+    max-width: 100%;
+    > span{
+      white-space: break-spaces;
+      line-height: 1.3;
+    }
+  }
+  .elementor-post-navigation .elementor-post-navigation__link a {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .elementor-post-navigation .elementor-post-navigation__prev a {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}

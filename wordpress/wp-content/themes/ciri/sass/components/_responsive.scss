@@ -1,0 +1,11 @@
+@media(min-width: 1280px){
+	body{
+		--theme-sidebar-space: 60px
+	}
+}
+
+@media(min-width: 1600px){
+	body{
+		--theme-sidebar-space: 80px
+	}
+}

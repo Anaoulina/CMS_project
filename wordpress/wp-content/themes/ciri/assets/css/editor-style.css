@@ -1,0 +1,21 @@
+p{
+  margin: 0 0 10px;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+pre{
+  margin: 20px 0;
+  padding: 20px;
+  color: #2080ad;
+  background-color: #fafafa;
+}
+code, kbd, pre, samp{
+  font-size: 16px;
+}
+code, kbd, pre, samp{
+  font-family: monospace, monospace;
+  font-size: 1em;
+}

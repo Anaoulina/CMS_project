@@ -1,0 +1,113 @@
+.post-navigation{
+    margin-bottom: 50px;
+    .nav-links{
+        @include display();
+        @include flex-wrap(wrap);
+        text-align: left;
+        position: relative;
+        @include align-items(flex-start);
+        > div{
+            width: 50%;
+            position: relative;
+        }
+        .nav-next:only-child {
+            margin-left: 50%;
+        }
+        a{
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: flex-start ;
+            height: 100%;
+            position: relative;
+            padding-bottom: 25px;
+            .single-room-article & {
+                @include align-items(center);
+            }
+            &:hover{
+                .blog_pn_nav-text,
+                .blog_pn_nav-title{
+                    color: inherit;
+                }
+            }
+        }
+        .blog_pn_nav-right{
+            -ms-flex-order: 1;
+            order: 1;
+            max-width: calc(100% - 90px);
+            span{
+                display: block;
+            }
+        }
+        .nav-next{
+            text-align: right;
+            a{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    .blog_pn_nav-title{
+        width: 240px;
+        max-width: 100%;
+        line-height: 1.4;
+        color: $secondary-color;
+        font-family: $heading-font-family;
+        font-weight: $heading-font-weight;
+    }
+    .blog_pn_nav-meta{
+        font-size: .875em;
+        margin-top: 2px;
+        color: $three-color;
+    }
+    .blog_pn_nav-text {
+        position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        color: $primary-color;
+    }
+}
+.single-room-article .post-navigation{
+    margin-top: 50px;
+    .nav-links{
+        a{
+            padding-top: 35px;
+        }
+        > div {
+            padding: 0;
+            &:before {
+                content: '';
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .post-navigation .nav-links{
+        > div{
+            width: 100%;
+            margin: 0;
+        }
+        .blog_pn_nav-title{
+            line-height: 1.5;
+        }
+        a{
+            padding-bottom: 20px;
+        }
+        .blog_pn_nav-text{
+            display: none;
+        }
+        .nav-next {
+            text-align: inherit;
+            a{
+                flex-direction: row;
+            }
+            .nav_pnpp__image{
+                margin-right: 20px;
+                margin-left: 0;
+            }
+        }
+        .nav-next:only-child {
+            margin: 0;
+        }
+    }
+}

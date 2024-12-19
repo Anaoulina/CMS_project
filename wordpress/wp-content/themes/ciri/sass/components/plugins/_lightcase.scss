@@ -1,0 +1,251 @@
+.featherlight {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+  white-space: nowrap;
+
+}
+
+/* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+.custom-featherlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -1;
+  background: rgba(#000, .5);
+  cursor: url(assets/images/light-close.png) 16 16, pointer;
+}
+
+.featherlight:before {
+  /* position: trick to center content vertically */
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.featherlight .featherlight-content {
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  background: #fff;
+  white-space: normal;
+  max-width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  min-width: 100px;
+}
+
+.featherlight .featherlight-outer {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0;
+  max-height: 90vh;
+  max-width: 90vw;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  //overflow: hidden;
+}
+
+.featherlight-loading .featherlight-content {
+  background-color: transparent;
+}
+
+.featherlight.featherlight-loading .featherlight-close-icon {
+  display: none;
+}
+
+/* contains the content */
+.featherlight .featherlight-inner {
+  /* make sure its visible */
+  display: block;
+}
+
+/* don't show these though */
+.featherlight script.featherlight-inner,
+.featherlight link.featherlight-inner,
+.featherlight style.featherlight-inner {
+  display: none;
+}
+
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  border: none;
+  padding: 0;
+  background-color: $secondary-color;
+  border-radius: 50%;
+  transition: all .3s;
+  z-index: 9;
+}
+
+.featherlight .featherlight-close-icon:hover {
+  background-color: $primary-color;
+  color: #fff;
+  @include rotate(90);
+}
+
+.featherlight .featherlight-image {
+/* styling */
+  width: 100%;
+}
+
+
+.featherlight-iframe .featherlight-content {
+  /* removed the border for image croping since iframe is edge to edge */
+  background: none;
+  border-bottom: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.featherlight iframe {
+  /* styling */
+  border: none;
+}
+
+.featherlight iframe.featherlight-inner {
+  width: 1170px;
+  height: calc( 1170px * .5625 );
+  @media (max-width: 1200px) {
+    height: calc(100vw * .5625);
+  }
+}
+
+/* hide non featherlight items when printing */
+@media print {
+  html.with-featherlight > * > :not(.featherlight) {
+    display: none;
+  }
+}
+.is--qvpp .featherlight-outer {
+  width: 1400px;
+  max-height: 84vh;
+  max-width: 84vw;
+  .featherlight-content {
+    width: 100%;
+    max-height: 84vh;
+  }
+}
+
+.featherlight-loading .la-loader.spinner3 {
+  margin: 0 auto;
+}
+.open-custom-msg .featherlight-content {
+  width: 450px;
+}
+.la-global-message.featherlight-inner {
+  padding: 30px;
+}
+
+.lakit-ppc.featherlight-inner {
+  position: relative;
+}
+.lakit-ppc--content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  color: #fff;
+  padding: 50px 50px;
+}
+.lakit-ppc--content *,
+.lakit-ppc--content .lakit-posts__meta,
+.lakit-ppc--content .lakit-posts__meta * {
+  color: inherit;
+}
+.lakit-ppc--content .lakit-posts__title{
+  font-size: var(--theme-h3-font-size);
+  margin: 0;
+  font-weight: normal;
+}
+.body-pf-gallery .featherlight-content {
+  max-width: none;
+  max-height: none;
+}
+html.with-featherlight {
+  //overflow: hidden;
+}
+
+@media(max-width: 880px){
+  .lakit-ppc--content {
+    padding: 20px;
+  }
+  .lakit-ppc.featherlight-inner {
+    width: 100% !important;
+  }
+  .body-pf-gallery .featherlight-content {
+    margin: 0;
+  }
+  .featherlight .featherlight-close-icon {
+    left: calc(50% - 25px);
+    right: auto;
+    top: auto;
+    bottom: -60px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .featherlight-iframe .featherlight-outer,
+  .featherlight-iframe .featherlight-content{
+    max-width: 100%;
+  }
+}
+.woocommerce img.pswp__img,
+.woocommerce-page img.pswp__img,
+.elementor-lightbox .elementor-lightbox-image {
+  background: #fff;
+}
+
+.featherlight.featherlight--cvideo iframe.featherlight-inner {
+  height: calc( var(--video-naturalWidth) * var(--video-ratio) );
+  width: var(--video-naturalWidth);
+}
+
+@media(min-width: 1400px){
+  .is--qvpp .featherlight-outer .featherlight-content{
+    min-height: 600px;
+  }
+}
+
+@media(min-height: 650px) and (max-height: 1000px) and (min-width: 1400px){
+  .is--qvpp .featherlight-outer{
+    width: 1300px;
+  }
+  .is--qvpp .featherlight-outer .featherlight-content{
+    min-height: 624px;
+  }
+}
+
+.featherlight-content{
+  scrollbar-color:  #000 #0000001a;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 5px
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #0000001a
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #000
+  }
+}

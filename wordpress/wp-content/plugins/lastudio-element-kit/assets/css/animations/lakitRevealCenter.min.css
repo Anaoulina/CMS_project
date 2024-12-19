@@ -1,0 +1,1 @@
+.lakitRevealCenter{animation-name:lakitRevealCenter}@keyframes lakitRevealCenter{0%{-webkit-clip-path:polygon(20% 20%,80% 20%,80% 80%,20% 80%);clip-path:polygon(20% 20%,80% 20%,80% 80%,20% 80%)}100%{-webkit-clip-path:polygon(0 0,100% 0,100% 100%,0% 100%);clip-path:polygon(0 0,100% 0,100% 100%,0% 100%)}}

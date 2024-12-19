@@ -1,0 +1,23 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">la_team_member</custom-type>
+		<custom-type translate="1">la_portfolio</custom-type>
+	</custom-types>
+
+	<custom-fields>
+		<custom-field action="copy">_la_link_text</custom-field>
+		<custom-field action="copy">_la_link</custom-field>
+		<custom-field action="copy">_la_quote_text</custom-field>
+		<custom-field action="copy">_la_quote_cite</custom-field>
+	</custom-fields>
+	
+	<taxonomies>
+		<taxonomy translate="1">la_portfolio_category</taxonomy>
+	</taxonomies>
+	
+	<admin-texts>
+		<key name="lastudio-kit-settings">
+			<key name="swatches_swatches_more_text" />
+		</key>
+	</admin-texts>
+</wpml-config>

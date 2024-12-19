@@ -1,0 +1,36 @@
+.site-footer--default {
+	padding: 1em;
+	font-size: .875em;
+	margin-top: 70px;
+}
+
+.la-newsletter-popup{
+	display: none;
+}
+.la-newsletter-popup a.btn-close-newsletter-popup {
+	display: none;
+}
+
+.open-newsletter-popup .featherlight .featherlight-content {
+	width: var(--theme-newsletter-popup-width);
+	height: var(--theme-newsletter-popup-height);
+	max-width: 100%;
+	max-height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+.open-newsletter-popup .featherlight .featherlight-close-icon {
+	background-color: transparent;
+	color: $secondary-color;
+	font-size: 24px;
+	&:hover{
+		background-color: transparent;
+		color: $primary-color;
+	}
+}
+
+@media(max-width: 767px){
+	.open-newsletter-popup .featherlight .featherlight-content {
+		height: auto;
+	}
+}

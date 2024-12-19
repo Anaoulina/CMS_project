@@ -1,0 +1,120 @@
+.la_demo_importer_panel .theme-browser .theme .theme-screenshot img {
+    min-height: 100%;
+    object-fit: cover;
+}
+.demo-importer-message{
+    margin-bottom: 15px;
+}
+.demo-importer-message > .below-h2{
+    margin-left: 0;
+    font-size: 16px;
+    padding: 10px;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+.demo-importer-message-info{
+    margin-bottom: 15px;
+}
+
+.lasf-field-la_demo_importer .theme-browser .theme {
+    cursor: default;
+}
+.lasf-field-la_demo_importer .theme-browser .theme.not-imported .more-details,
+.lasf-field-la_demo_importer .theme-browser .theme.not-imported .theme-screenshot{
+    cursor: pointer;
+}
+.lasf-field-la_demo_importer .theme-browser .theme:hover .more-details{
+    opacity: 1;
+}
+.lasf-field-la_demo_importer .theme-browser .theme .spinner {
+    background-position: right center;
+    display: none;
+    font-size: 12px;
+    height: 20px;
+    margin-right: 0;
+    padding-right: 25px;
+    padding-top: 5px;
+    visibility: visible;
+    width: auto;
+}
+
+.lasf-field-la_demo_importer .theme-browser .theme.not-imported .reimporter-button,
+.lasf-field-la_demo_importer .theme-browser .theme .theme-name span{
+    display: none;
+}
+.lasf-field-la_demo_importer .theme-browser .theme.imported .theme-actions,
+.lasf-field-la_demo_importer .theme-browser .theme.imported .more-details{
+    opacity: 1;
+}
+.lasf-field-la_demo_importer .theme-browser .theme.imported .theme-actions .button-secondary{
+    display: none;
+}
+.lasf-field-la_demo_importer .theme-browser .theme.active .theme-name span{
+    display: inline-block;
+}
+.lasf-field-la_demo_importer .theme-browser .theme-extra-options {
+    margin-top: 10px;
+    position: absolute;
+}
+
+
+.demo-importer-message-info table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.demo-importer-message-info table * {
+    box-sizing: border-box;
+}
+
+.demo-importer-message-info thead,
+.demo-importer-message-info tbody,
+.demo-importer-message-info tr,
+.demo-importer-message-info th,
+.demo-importer-message-info td {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.demo-importer-message-info tbody {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.demo-importer-message-info tbody td,
+.demo-importer-message-info thead th {
+    float: left;
+    width: 80%;
+}
+
+.demo-importer-message-info tbody td:first-child,
+.demo-importer-message-info thead th:first-child {
+    width: 20%;
+}
+
+.demo-importer-message-info.is-running table {
+    background: #000;
+}
+
+
+.demo-importer-message-info.is-running tr:not(:last-child) {
+    display: none;
+}
+
+.demo-importer-message-info.is-running th,
+.demo-importer-message-info.is-running td {
+    color: #fff;
+    border: none;
+}
+
+.demo-importer-message-info.is-running th:first-child,
+.demo-importer-message-info.is-running td:first-child {
+    text-transform: capitalize;
+}
+
+
+.la_demo_importer_panel .theme-browser .theme .theme-screenshot:after {
+    padding-top: 59%;
+}

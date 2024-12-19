@@ -1,0 +1,165 @@
+/**
+ * Single Post
+ */
+.page-content {
+	margin-bottom: 3em;
+	.elementor-page &{
+		margin-bottom: 0;
+	}
+}
+.postformat-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+.postformat-content--link{
+	position: relative;
+	color: $secondary-color;
+	font-size: var(--theme-h2-font-size);
+	font-weight: 600;
+	overflow: hidden;
+	&:before{
+		content: '\ea1d';
+		font-family: LaStudioIcons;
+		font-size: 1.4em;
+		margin: 0 0.5em;
+	}
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100% !important;
+		object-fit: cover;
+		z-index: -1;
+	}
+}
+.postformat-content--standard {
+	position: relative;
+}
+.postformat-content--quote:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	pointer-events: none;
+	z-index: 1;
+}
+.postformat-content--quote-inner {
+	display: flex;
+	top: 0;
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	flex-flow: column;
+	text-align: center;
+	padding: 8% 5%;
+	z-index: 2;
+}
+.postformat-content-text{
+	font-size: var(--theme-h2-font-size);
+	line-height: 1.2;
+	margin-bottom: .5em;
+}
+.postformat-content-cite{
+	border: 1px solid;
+	padding: 0.2em 1.2em;
+}
+.postformat-content--v{
+	.postformat-content--inner{
+		position: relative;
+	}
+	.postformat--icon{
+		position: absolute;
+		display: flex;
+		font-size: 22px;
+		border-radius: 50%;
+		padding: 1em;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		color: #fff;
+		z-index: 2;
+		transition: all .3s;
+		background-color: #00000033;
+	}
+	a.la-popup{
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity: .0;
+			z-index: 1;
+		}
+		&:hover{
+			.postformat--icon{
+				transform: translate(-50%,-50%) scale(1.1);
+				box-shadow: 0 3px 20px rgba(0,0,0,.05);
+			}
+		}
+	}
+}
+.postformat--gallery span {
+	display: block;
+	position: relative;
+}
+.postformat--gallery span img {
+	width: 100%;
+}
+.postformat-content .lakit-carousel__dots {
+	display: none;
+}
+.elementor-widget-lakit-postformat-content{
+	.postformat-content{
+		width: var(--postformat-width, 100%);
+		max-width: 100%;
+	}
+	&.is-custom-height-yes{
+
+		.postformat--gallery{
+			span{
+				padding-bottom: var(--postformat-height, 50%);
+			}
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.postformat-content--v,
+		.postformat-content--standard{
+			.postformat-content--inner{
+				padding-bottom: var(--postformat-height, 50%);
+				img{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}
+.postformat-content .lakit-arrow {
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 20px;
+	font-size: 14px;
+}

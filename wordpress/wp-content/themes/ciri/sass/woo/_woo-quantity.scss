@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------
+Woo Quantity Buttons
+-------------------------------------------------------------------*/
+.quantity {
+	@include display();
+	@include align-items(center);
+	@include flex-flow(row nowrap);
+	zoom: 1;
+	width: 80px;
+	.qty{
+		-webkit-appearance: none;
+		-moz-appearance:textfield;
+		border: none;
+		color: inherit;
+		padding: 0;
+		text-align: center;
+		width: 40px;
+	}
+	.qty-minus,
+	.qty-plus{
+		cursor: pointer;
+		i{
+			margin-top: -2px;
+			vertical-align: middle;
+		}
+	}
+	input{
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			display: none;
+		}
+	}
+}
+.wrap-cart-cta{
+	.quantity{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		border: 1px solid rgba(0,0,0,0.1);
+		width: 100px;
+		text-align: center;
+		.qty{
+			width: 33px;
+			display: inline-block;
+			height: 58px;
+			vertical-align: middle !important;
+		}
+		span{
+			width: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			font-size: 20px;
+		}
+	}
+}
+.grouped_form{
+	.quantity{
+		font-size: 14px;
+		color: $secondary-color;
+		width: 70px;
+		.qty-minus,
+		.qty-plus{
+			font-size: 20px;
+		}
+	}
+}

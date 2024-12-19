@@ -1,0 +1,29 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="copy">album_release_date</custom-field>
+		<custom-field action="copy">album_people</custom-field>
+		<custom-field action="copy">album_latest_video</custom-field>
+		<custom-field action="copy">album_backtolink</custom-field>
+		<custom-field action="copy">album_available_on</custom-field>
+		<custom-field action="translate">album_tracks</custom-field>
+
+		<custom-field action="copy">event_status</custom-field>
+		<custom-field action="copy">event_start_date</custom-field>
+		<custom-field action="copy">event_end_date</custom-field>
+		<custom-field action="copy">event_time</custom-field>
+		<custom-field action="copy">event_location</custom-field>
+		<custom-field action="translate" style="line" label="Event Stage">event_stage</custom-field>
+		<custom-field action="copy">event_website</custom-field>
+		<custom-field action="copy">event_organized_by</custom-field>
+		<custom-field action="copy">event_ticket_link</custom-field>
+		<custom-field action="copy">event_backtolink</custom-field>
+
+	</custom-fields>
+	<custom-fields-texts>
+		<key name="album_tracks">
+			<key name="title" />
+			<key name="artist" />
+			<key name="lyrics" />
+		</key>
+	</custom-fields-texts>
+</wpml-config>

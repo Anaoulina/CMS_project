@@ -1,0 +1,148 @@
+.dokan-store #main #content-wrap {
+  padding-top: 0;
+}
+.dokan-dashboard div#content-wrap {
+  width: 100%;
+}
+.dashboard-widget.products {
+  margin: 0;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a i {
+  padding: 0;
+  vertical-align: middle;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a {
+  text-align: center;
+}
+
+.dokan-dashboard .dokan-settings-content .dokan-settings-area .dokan-banner {
+  max-height: 400px;
+  max-width: 100%;
+  @include display;
+}
+
+.dokan-dashboard .dokan-settings-content .dokan-settings-area .dokan-banner img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.single-page-article .dokan-single-store .dokan-store-tabs ul {
+  margin-bottom: 40px;
+}
+
+#wcvendor_image_bg {
+  background-color: #f4f4f4;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 30px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  min-height: 270px;
+}
+.wcvendor-cover-image-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(156, 156, 156, .1) 30%, rgba(11, 11, 11, .35) 80%, rgba(0, 0, 0, .48));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(156, 156, 156, .1) 30%, rgba(11, 11, 11, .35) 80%, rgba(0, 0, 0, .48));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b0000000', GradientType=0);
+  opacity: .65;
+}
+#wcvendor_profile_act_desc {
+  padding: 35px 0 35px 350px;
+  .store-name{
+    margin-bottom: 10px;
+  }
+}
+#wcvendor_profile_inner{
+  position: relative;;
+}
+#wcvendor_profile_logo {
+  position: absolute;
+  width: 270px;
+  bottom: 35px;
+  z-index: 2;
+  left: 0;
+  img{
+    width: 100%;
+  }
+}
+.wcvendor_store_desc{
+  @include display;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      * {
+        vertical-align: middle;
+      }
+    }
+  }
+  ul.wcvendor-store-info {
+    @include flex();
+    line-height: 1.5;
+    li{
+      margin-right: 25px;
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+  .store-social{
+      a{
+        width: 30px;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+      }
+  }
+}
+#wcvendor_profile_menu{
+  @include display;
+  @include align-items(center);
+  background-color: #f7f7f7;
+  margin-top: 10px;
+  #wcvendor_search_shops{
+    @include order(2);
+    .search-field{
+      border-width: 0;
+      font-size: 1em;
+      &:focus{
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+.wcvendor_profile_menu_tabs{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      border-right: 1px solid rgba(0,0,0,.1);
+    }
+  }
+  a{
+    display: inline-block;
+    line-height: 30px;
+    padding: 10px 30px;
+    &:hover{
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}

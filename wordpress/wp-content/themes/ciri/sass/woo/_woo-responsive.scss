@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------
+Woo Responsive
+-------------------------------------------------------------------*/
+
+@media(max-width: 1280px){
+  .form-row .input-text{
+    height: 50px;
+    line-height: 48px;
+  }
+  .select2-container .select2-selection--single{
+    height: 50px
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+    margin-top: 11px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 11px;
+  }
+  .place-order .button,
+  .wc-proceed-to-checkout .button{
+    font-size: 18px;
+    padding: 18px;
+  }
+  .woocommerce > p.cart-empty {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .woocommerce > p.cart-empty:before {
+    padding-top: 150px;
+    background-size: 150px auto;
+  }
+  .woocommerce > .return-to-shop .button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+
+@media(max-width: 992px){
+  form.woocommerce-checkout{
+    margin-top: 1em;
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+}
+
+@media(max-width: 767px){
+  form.woocommerce-checkout h3{
+    font-size: 22px;
+  }
+}

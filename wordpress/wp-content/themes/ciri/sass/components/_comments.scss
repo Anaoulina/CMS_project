@@ -1,0 +1,359 @@
+body{
+	--theme-comment-avatar-width: 90px;
+	--theme-comment-avatar-spacing: 40px;
+	--theme-subcomment-avatar-spacing: 25px;
+	--theme-subcomment-avatar-width: 50px;
+	--theme-comment-padding: 30px;
+	--theme-comment-bgcolor: #fff;
+	--theme-comment-deep1-spacing: 130px;
+	--theme-comment-deep2-spacing: 75px;
+}
+
+.woocommerce-Reviews-title,
+.comment-respond .comment-reply-title{
+	font-size: var(--theme-h3-font-size);
+	margin-bottom: 30px;
+	display: block;
+	line-height: var(--theme-heading-font-line-height);
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	letter-spacing: var(--theme-heading-font-spacing);
+	font-weight: normal;
+}
+.woocommerce-Reviews-title{
+	margin-bottom: 50px;
+}
+.logged-in {
+	.comment-reply-title{
+		margin-bottom: 10px;
+	}
+}
+.comment-entry ol li,
+.comment-entry ul li {
+	margin-bottom: 8px;
+}
+.comment-entry ol ol,
+.comment-entry ol ul,
+.comment-entry ul ul {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+.comment-reply-title small{
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0;
+	font-family: $body-font-family;
+	padding: 0 5px;
+}
+
+.commentlist{
+	list-style: none;
+	margin: 0 0 80px;
+	padding: 0;
+	img.avatar{
+		width: var(--theme-comment-avatar-width);
+		height: var(--theme-comment-avatar-width);
+		min-width: var(--theme-comment-avatar-width);
+		border-radius: 50%;
+		object-fit: cover;
+		.ltr & {
+			margin-right: var(--theme-comment-avatar-spacing);
+		}
+		.rtl & {
+			margin-left: var(--theme-comment-avatar-spacing);
+		}
+	}
+	.comment{
+		&.depth-1{
+			~ .comment-div{
+				.ltr & {
+					margin-left: var(--theme-comment-deep1-spacing);
+				}
+				.rtl & {
+					margin-right: var(--theme-comment-deep1-spacing);
+				}
+			}
+		}
+		&:not(.depth-1){
+			img.avatar{
+				width: var(--theme-subcomment-avatar-width);
+				height: var(--theme-subcomment-avatar-width);
+				min-width: var(--theme-subcomment-avatar-width);
+				.ltr & {
+					margin-right: var(--theme-subcomment-avatar-spacing);
+				}
+				.rtl & {
+					margin-left: var(--theme-subcomment-avatar-spacing);
+				}
+			}
+			~ .comment-div{
+				.ltr & {
+					margin-left: var(--theme-comment-deep2-spacing);
+				}
+				.rtl & {
+					margin-right: var(--theme-comment-deep2-spacing);
+				}
+			}
+		}
+	}
+
+	.comment-div{
+		.comment-div{
+			.comment-div{
+				.comment-div {
+					margin-left: 0 !important;
+					margin-right: 0 !important;
+				}
+			}
+		}
+	}
+	.comment_container{
+		@include display();
+		margin-bottom: 40px
+	}
+	.comment-text{
+		position: relative;
+		border: 1px solid #CCCCCC;
+		padding: var(--theme-comment-padding);
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		&:before{
+			content: "\201C";
+			position: absolute;
+			top: -0.325em;
+			font-size: 45px;
+			font-family: serif;
+			font-weight: bold;
+			line-height: 1;
+			background-color: var(--theme-comment-bgcolor);
+			height: 1em;
+			padding-left: 0.2em;
+			padding-right: 0.2em;
+			.ltr & {
+				left: var(--theme-comment-padding);
+			}
+			.rtl & {
+				right: var(--theme-comment-padding);
+			}
+		}
+		.description {
+			width: 100%;
+			margin-bottom: 0.8em;
+		}
+	}
+	.comment-footer {
+		position: absolute;
+		line-height: 1;
+		bottom: -0.5em;
+		font-size: .857em;
+		.ltr & {
+			right: var(--theme-comment-padding);
+		}
+		.rtl & {
+			left: var(--theme-comment-padding);
+		}
+		a{
+			background-color: var(--theme-comment-bgcolor);
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+	}
+	.woocommerce-review__author {
+		font-weight: 500;
+		color: $secondary-color;
+		text-transform: capitalize;
+	}
+	.star-rating{
+		margin-bottom: 0.9em;
+	}
+	.meta{
+		margin: 0;
+		order: 8;
+		display: flex;
+		line-height: 1;
+		gap: 5px;
+		align-items: center;
+	}
+	.woocommerce-review__published-date {
+		font-size: .875em;
+		padding-top: 0.13em;
+	}
+}
+
+div#respond {
+	margin-bottom: 50px;
+}
+
+p.comment-notes{
+	font-style: italic;
+	font-size: 1em;
+	margin-bottom: 50px;
+}
+body:not(.logged-in) p.comment-notes{
+	font-size: 14px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.comment-form .logged-in-as{
+	margin-bottom: 25px;
+}
+.comment-form label{
+	display: block;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
+.comment-form textarea{
+	margin-bottom: 20px;
+}
+.comment-form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]){
+	margin-bottom: 15px;
+	width: 100%;
+	max-width: 100%;
+	-webkit-appearance: none;
+}
+.comment-form .comment-form-cookies-consent{
+	font-size: .875em;
+}
+.comment-form .comment-form-cookies-consent label{
+	display: inline;
+	padding: 0 5px;
+}
+.comment-form textarea{
+	width: 100%;
+	height: 150px;
+	max-width: 100%;
+	padding: 20px;
+	vertical-align: top;
+	-webkit-appearance: none;
+}
+.comment-form .submit{
+	min-width: 150px;
+	padding: 16px 30px;
+	text-transform: uppercase;
+	background: none;
+	border: 1px solid;
+	color: $primary-color;
+	font-size: 1em;
+	font-weight: normal;
+}
+.comment-form .comment-form-url,
+.comment-form .comment-form-email,
+.comment-form .comment-form-author{
+	width: calc((100% / 3) - 15px);
+	float: left;
+	margin-left: 20px;
+}
+.comment-form .comment-form-author{
+	margin-left: 0;
+}
+.comment-form .comment-form-email ~ .form-submit{
+	padding-top: 5px;
+}
+.comment-form-rating {
+	margin-bottom: 10px;
+}
+.comment-form-rating label{
+	margin-bottom: 0;
+	display: inline-block;
+	.rtl & {
+		margin-left: 20px;
+	}
+	.ltr & {
+		margin-right: 20px;
+	}
+}
+.comment-form-rating p.stars{
+	display: inline-block;
+	line-height: 1;
+	margin: 0;
+	~ p.stars{
+		display: none;
+	}
+}
+.woocommerce-Reviews .comment-form textarea{
+	margin-bottom: 0;
+}
+.woocommerce-Reviews .comment-form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]){
+	margin-bottom: 0;
+}
+.woocommerce-Reviews .comment-form-comment + p.form-submit{
+	padding-top: 20px;
+}
+li.trackback,
+li.pingback{
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+li.trackback:first-child,
+li.pingback:first-child{
+	margin-top: 2em;
+}
+li.trackback + li.comment-container,
+li.pingback + li.comment-container{
+	margin-top: 2em;
+}
+p.no-comments{
+	margin-top: 1em;
+}
+
+.comments-area .comments-title{
+	margin-bottom: 40px;
+}
+
+.commentlist  .depth-1 > .comment-text {
+	max-width: calc(100% - var(--theme-comment-avatar-spacing) - var(--theme-comment-avatar-width));
+}
+
+@media(max-width: 1280px){
+	body{
+		--theme-comment-avatar-width: 70px;
+		--theme-comment-avatar-spacing: 30px;
+		--theme-subcomment-avatar-spacing: 25px;
+		--theme-subcomment-avatar-width: 50px;
+		--theme-comment-deep1-spacing: 80px;
+		--theme-comment-deep2-spacing: 60px;
+	}
+	.commentlist .comment-text:before{
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 768px){
+	body{
+		--theme-comment-avatar-width: 50px;
+		--theme-comment-avatar-spacing: 15px;
+		--theme-subcomment-avatar-spacing: 15px;
+		--theme-subcomment-avatar-width: 45px;
+		--theme-comment-padding: 20px;
+		--theme-comment-deep1-spacing: 15px;
+		--theme-comment-deep2-spacing: 15px;
+	}
+	.commentlist .comment-text{
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.commentlist .comment-text:before{
+		font-size: 30px;
+	}
+	.commentlist .comment_container{
+		margin-bottom: 30px;
+	}
+	.comment-form textarea{
+		padding: 15px;
+		margin-bottom: 15px;
+	}
+	.comment-form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]){
+		padding: 10px 15px;
+	}
+}
+@media (max-width: 600px){
+	.comment-form .comment-form-url,
+	.comment-form .comment-form-email,
+	.comment-form .comment-form-author{
+		width: 100%;
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,170 @@
+@charset "utf-8";
+/*
+Theme Name:     Ciri
+Theme URI:      https://themeforest.net/user/LaStudio/portfolio?ref=LaStudio
+Author:         LA Studio
+Author URI:     https://themeforest.net/user/LaStudio?ref=LaStudio
+Description:    Ciri - Furniture & Interior WooCommerce Theme
+Version:        1.0.0
+Requires at least: 5.0
+Requires PHP:   7.0
+Tags:           catalog, ceramics, craftsman, decor, elementor, furniture, furniture catalog, furniture portfolio, furniture shop, furniture store, home decor, interior decoration, lighting, woocommerce, woodworker
+License:        GNU General Public License
+License URI:    licence/GPL.txt
+Text Domain:    ciri
+Domain Path:    /languages/
+*/
+
+// Configuration
+@import "config";
+
+// Mixins
+@import "mixins";
+
+/*------------------------------------*
+    $CONTENTS
+*------------------------------------*/
+/**
+ * BASE
+ * - MAIN
+ * - NORMALIZE
+ * - LAYOUTS
+ * - COMPONENTS
+ * - TYPOGRAPHY
+ * - FORMS
+ *
+ * COMPONENTS
+ * - HEADER
+ * - NAVIGATIONS
+ * - LINKS EFFECT
+ * - MEGA MENU
+ * - SEARCH ICON
+ * - PAGE HEADER
+ * - BLOG
+ * - SIDEBAR
+ * - CUSTOM SELECTS
+ * - PAGINATION
+ * - COMMENT
+ * - SEARCH
+ * - FOOTER
+ * - 404 PAGE
+ *
+ * PLUGINS
+ * - GENERAL
+ * - SLICK
+ * - LA-STUDIO ELEMENTS
+ *
+ * RESPONSIVE
+ */
+
+/*------------------------------------*
+	$MAIN
+*------------------------------------*/
+@import "base/main";
+
+/*------------------------------------*
+	$NORMALIZE
+*------------------------------------*/
+@import "base/normalize";
+
+/*------------------------------------*
+	$LAYOUTS
+*------------------------------------*/
+@import "layout";
+
+/*------------------------------------*
+	$COMPONENTS
+*------------------------------------*/
+@import "base/shared";
+
+/*------------------------------------*
+	$TYPOGRAPHY
+*------------------------------------*/
+@import "base/typography";
+
+/*------------------------------------*
+	$FORMS
+*------------------------------------*/
+@import "base/form";
+
+
+/*------------------------------------*
+	$HEADER
+*------------------------------------*/
+//@import "components/header/dlmenu";
+@import "components/header/header_builder";
+
+/*------------------------------------*
+	$PAGE HEADER
+*------------------------------------*/
+@import "components/page-header";
+
+/*------------------------------------*
+	$BLOG
+*------------------------------------*/
+@import "components/blog/list-posts";
+
+/*------------------------------------*
+	$SINGLE
+*------------------------------------*/
+
+@import "components/blog/single-post";
+
+/*------------------------------------*
+	$SIDEBAR
+*------------------------------------*/
+@import "components/sidebar/sidebar";
+
+
+/*------------------------------------*
+	$PAGINATION
+*------------------------------------*/
+@import "components/pagination";
+
+/*------------------------------------*
+	$COMMENT
+*------------------------------------*/
+@import "components/comments";
+
+/*------------------------------------*
+	$SEARCH
+*------------------------------------*/
+@import "components/search";
+
+/*------------------------------------*
+	$FOOTER
+*------------------------------------*/
+@import "components/footer/general";
+
+/*------------------------------------*
+	$404 PAGE
+*------------------------------------*/
+@import "components/404";
+
+/*------------------------------------*
+	$GENERAL
+*------------------------------------*/
+@import "components/plugins/general";
+
+/*------------------------------------*
+	$LIGHTCASE
+*------------------------------------*/
+@import "components/plugins/lightcase";
+
+/*------------------------------------*
+	$NEXT & PREVIOUS
+*------------------------------------*/
+@import "components/next-prev";
+
+/*------------------------------------*
+	$RESPONSIVE
+*------------------------------------*/
+@import "base/demo";
+
+@import "base/theme-default";
+
+@import "components/responsive";
+
+@import "base/demo02";
+
+@import "base/custom";
